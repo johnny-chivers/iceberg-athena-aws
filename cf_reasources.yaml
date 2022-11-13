@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: AWS CloudFormation which creates the resources for the aws iceberg glue tutorial 
+### 
+# Parameters for the cloudformation template
+Parameters:
+  S3PySparkBucketName:
+    Type: String
+    Description: Bucket name for the aws tutorial
+Resources:
+  S3BucketForData:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: !Ref S3PySparkBucketName
+      Tags:
+      - Key: identifier
+        Value: awsicebergtutorial
+  ###
+  # Database created for the tables to reside in
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties: 
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput: 
+        Name: iceberg_tutorial_db
+        Description: "This database contains the tables for the iceberg tutorial"
+
+  ###
+  # Create Athena Workgroup 
+  AthenaWorkGroupIceberg:
+    DependsOn: 
+    - GlueDatabase
+    - S3BucketForData
+    Type: AWS::Athena::WorkGroup
+    Properties:
+          Name: AthenaWorkGroupIceberg
+          Description: The workgroup for Iceberg AWS tutorial
+          State: ENABLED
+          WorkGroupConfiguration:
+            ResultConfiguration:
+              OutputLocation: s3://${S3PySparkBucketName}/athena_results   
+
+Outputs:
+  S3Bucket:
+    Value: !Ref S3BucketForData
