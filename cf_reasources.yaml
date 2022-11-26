@@ -37,7 +37,7 @@ Resources:
           State: ENABLED
           WorkGroupConfiguration:
             ResultConfiguration:
-              OutputLocation: s3://${S3BucketForData}/athena_results   
+              OutputLocation: !Sub s3://${S3PySparkBucketName}/athena_results   
 
 Outputs:
   S3Bucket:
