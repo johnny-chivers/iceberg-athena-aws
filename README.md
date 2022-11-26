@@ -130,7 +130,7 @@ The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on I
     ```
 8. Update some data to see the chnage take place 
     ```
-    UPDATE nyc_taxi_iceberg_data_manipulation SET passenger_count = 4.0 WHERE vendorid = 2 AND year(tpep_pickup_datetime) =2008;
+    UPDATE nyc_taxi_iceberg_data_manipulation SET passenger_count = 4.0 WHERE vendorid = 2 AND year(tpep_pickup_datetime) =2022;
     ```
 9. Select the updated data
     ```
@@ -138,7 +138,7 @@ The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on I
     ```
 10. Time travel query
     ```
-    SELECT * FROM nyc_taxi_iceberg_data_manipulation FOR SYSTEM_TIME AS OF TIMESTAMP '2022-11-01 22:00:00' WHERE vendorid = 2 and year(tpep_pickup_datetime)= 2008 limit 10; 
+    SELECT * FROM nyc_taxi_iceberg_data_manipulation FOR SYSTEM_TIME AS OF TIMESTAMP '2022-11-01 22:00:00' WHERE vendorid = 2 and year(tpep_pickup_datetime)= 2022 limit 10; 
     ```
 11. Delete from iceberg table
     ```
