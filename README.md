@@ -128,13 +128,13 @@ The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on I
     INSERT INTO nyc_taxi_iceberg_data_manipulation
     SELECT * FROM nyc_taxi_iceberg;
     ```
-8. Update some data to see the chnage take place 
+8. Update some data to see the change take place 
     ```
     UPDATE nyc_taxi_iceberg_data_manipulation SET passenger_count = 4.0 WHERE vendorid = 2 AND year(tpep_pickup_datetime) =2022;
     ```
 9. Select the updated data
     ```
-    SELECT * FROM nyc_taxi_iceberg_data_manipulation WHERE vendorid = 2 and year(tpep_pickup_datetime) =2008 limit 10;
+    SELECT * FROM nyc_taxi_iceberg_data_manipulation WHERE vendorid = 2 and year(tpep_pickup_datetime) =2022 limit 10;
     ```
 10. Time travel query
     ```
