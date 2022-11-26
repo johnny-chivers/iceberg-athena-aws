@@ -117,7 +117,7 @@ The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on I
     INSERT INTO iceberg_tutorial_db.nyc_taxi_iceberg
     SELECT 
     *
-    FROM "iceberg_tutorial_db"."nyc_taxi_iceberg_csv" ;
+    FROM "iceberg_tutorial_db"."nyc_taxi_csv" ;
     ```
 6. Run a query to look at the Day partition to see how Iceberg works
     ```
