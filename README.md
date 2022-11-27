@@ -10,7 +10,7 @@
 
 ## What's included
 
-The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on Iceberg in AWS.
+The repo is to supplement the [youtube video](https://youtu.be/iGvj1gjbwl0) on Iceberg in AWS.
 
 ## Set up
 
@@ -153,7 +153,7 @@ The repo is to supplement the [youtube video](https://youtu.be/grfSNj2EMwo) on I
 
 ## Useful Links
 
-- [youtube video](https://youtu.be/grfSNj2EMwo) 
+- [youtube video](https://youtu.be/iGvj1gjbwl0) 
 - [website](https://www.johnnychivers.co.uk)
 - [buy me a coffee](https://www.buymeacoffee.com/johnnychivers)
 
