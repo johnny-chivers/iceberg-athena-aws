@@ -83,7 +83,7 @@ The repo is to supplement the [youtube video](https://youtu.be/iGvj1gjbwl0) on I
       LOCATION 's3://<s3-bucket-name>/nyc_taxi_iceberg/'
       TBLPROPERTIES ( 'table_type' ='ICEBERG'  );
     ```
-4. Create a 2nd Apache Cceberg table for updating data
+4. Create a 2nd Apache Iceberg table for updating data
     ```
     CREATE TABLE
       iceberg_tutorial_db.nyc_taxi_iceberg_data_manipulation 
